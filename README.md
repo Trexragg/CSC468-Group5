@@ -1,2 +1,1 @@
-# CSC468-Group5
-Group Project
+# csc468cloud
