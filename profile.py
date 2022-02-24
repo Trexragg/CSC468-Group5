@@ -31,15 +31,3 @@ node.routable_control_ip = "true"
 node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_docker.sh"))
   
 pc.printRequestRSpec(request)
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
