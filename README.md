@@ -1,2 +1,3 @@
-# CSC468-Group5
-Group Project
+## Jenkins
+
+Example C code with a Makefile
