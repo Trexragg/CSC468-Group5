@@ -10,11 +10,6 @@ services:
     build: hasher
     ports:
     - "8002:80"
-    
-  hasher:
-    build: hasher
-    ports:
-    - "8002:80"
 
   webui:
     build: webui
