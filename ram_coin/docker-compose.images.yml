@@ -1,30 +1,27 @@
-version: "2"
+version: "3"
 
 services:
   rng:
     build: rng
-    image: ${REGISTRY_SLASH}rng${COLON_TAG}
-    ports:
-    - "8001:80"
+    image: 127.0.0.1:30000/rng:v0.1
+    deploy:
+      mode: global
 
   hasher:
     build: hasher
-    image: ${REGISTRY_SLASH}hasher${COLON_TAG}
-    ports:
-    - "8002:80"
+    image: 127.0.0.1:30000/hasher:v0.1
 
   webui:
     build: webui
-    image: ${REGISTRY_SLASH}webui${COLON_TAG}
+    image: 127.0.0.1:30000/webui:v0.1
     ports:
     - "8000:80"
-    volumes:
-    - "./webui/files/:/files/"
 
   redis:
     image: redis
 
   worker:
     build: worker
-    image: ${REGISTRY_SLASH}worker${COLON_TAG}
-
+    image: 127.0.0.1:30000/worker:v0.1
+    deploy:
+      replicas: 10
